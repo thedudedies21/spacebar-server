@@ -100,6 +100,9 @@ export class Application extends BaseClass {
 
     @Column({ type: "simple-json", nullable: true })
     install_params?: { scopes: string[]; permissions: string };
+    
+    @Column({ type: "simple-json", nullable: true })
+    proxy_config?: { url_map: {prefix: string; target: string}[]};
 
     @Column({ nullable: true })
     terms_of_service_url?: string;
